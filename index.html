@@ -1,14 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Company</title>
-    <link rel="stylesheet" href="static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Submission</title>
+    <style>
+        body{
+            font-family:Arial,sans-serif;
+            background:#111;
+            color:#fff;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            background:#222;
+            padding:30px;
+            border-radius:10px;
+            width:350px;
+            text-align:center;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin:15px 0;
+            border:none;
+            border-radius:5px;
+        }
+
+        button{
+            padding:12px 20px;
+            border:none;
+            border-radius:5px;
+            background:#00b894;
+            color:white;
+            cursor:pointer;
+            width:100%;
+        }
+
+        button:hover{
+            background:#019875;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Welcome to My Company</h1>
+<div class="box">
+    <h2>Submit Flag</h2>
 
-<p>Nothing to see here.</p>
+    <form action="submit.php" method="POST">
+        <input
+            type="text"
+            name="flag"
+            placeholder="CTF{...}"
+            autocomplete="off"
+            required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
 
 </body>
 </html>
